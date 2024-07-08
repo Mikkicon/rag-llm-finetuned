@@ -64,15 +64,18 @@ def generate_response(query, endpoint_name):
 
 
 def chatbot():
+    print()
     print("Chatbot initialized. Type 'exit' to quit.")
-    print("Example usage: \nquery: How to proceed with a refund for a product A if I'm from UAE?")
+    print("EXAMPLE -> query: What is the regular product A shipment duration?\n")
     while True:
         query = input("query: ")
         if query.lower() == 'exit':
             print("Chatbot session ended.")
+            print()
             break
         response = generate_response(query, endpoint_name)
-        print(f"Bot: {response}")
+        print(response)
+        print()
 
 if __name__ == "__main__":
   chatbot()
